@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário FATEC</title>
+</head>
+<body>
+
+    <h1>Matrícula FATEC</h1>
+
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label>Nome completo:</label><br>
+            <input type="text" name="nome" required minlength="5"><br><br>
+
+            <label>Email:</label><br>
+            <input type="email" name="email" required><br><br>
+
+            <label>Data de nascimento:</label><br>
+            <input type="date" name="nascimento"><br><br>
+
+            <label>CPF:</label><br>
+            <input type="text" name="cpf" pattern="[0-9]{11}" placeholder="Apenas números"><br><br>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Dados Acadêmicos</legend>
+
+            <label>Curso:</label><br>
+            <select name="curso">
+                <option>Agronomia</option>
+                <option>Análise e Desenvolvimento de Sistemas</option>
+                <option>Comércio Exterior</option>
+            </select><br><br>
+
+            <label>Período:</label><br>
+            <input type="radio" name="periodo" value="manha"> Manhã<br>
+            <input type="radio" name="periodo" value="noite"> Noite<br><br>
+
+            <label>
+                <input type="checkbox" name="programou">
+                Já programou antes?
+            </label>
+        </fieldset>
+
+        <br>
+        <label>Observações:</label><br>
+        <textarea name="obs" rows="4" cols="40"></textarea>
+
+        <br><br>
+        <button type="submit">Enviar</button>
+
+    </form>
+
+</body>
+</html>
