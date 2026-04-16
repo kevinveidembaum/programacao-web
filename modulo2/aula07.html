@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout com Flexbox</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    padding: 15px;
+}
+
+.menu a {
+    margin-left: 15px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #ddd;
+}
+
+.layout {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar {
+    flex: 0 0 250px;
+    background-color: #eee;
+    padding: 10px;
+}
+
+.content {
+    flex: 1;
+    padding: 10px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+footer {
+    margin-top: auto;
+    background-color: lightgray;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+<body>
+    <div class="page">
+
+        <header class="navbar">
+            <div class="logo">MeuSite</div>
+
+            <nav class="menu">
+                <a href="#">Home</a>
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Bem-vindo ao meu site</h1>
+        </section>
+
+        <div class="layout">
+
+            <aside class="sidebar">
+                <p>Menu lateral</p>
+            </aside>
+
+            <main class="content">
+
+                <div class="cards">
+                    <div class="card">Card 1</div>
+                    <div class="card">Card 2</div>
+                    <div class="card">Card 3</div>
+                    <div class="card">Card 4</div>
+                </div>
+
+            </main>
+
+        </div>
+
+
+        <footer>
+            <p>FATEC 2026</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
