@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo</title>
+</head>
+<style>
+    img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: clamp(20px, 5vw, 36px);
+}
+
+.resp-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.resp-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: lightgray;
+}
+
+.resp-nav {
+    display: none;
+}
+
+.resp-main {
+    padding: 20px;
+}
+
+.resp-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.resp-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.resp-footer {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: lightgray;
+}
+
+@media (min-width: 600px) {
+    .resp-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .resp-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .resp-nav {
+        display: block;
+    }
+}
+</style>
+<body>
+
+<div class="resp-page">
+
+    <header class="resp-header">
+        <div class="resp-logo">MeuSite</div>
+        <nav class="resp-nav">
+            <a href="#">Home</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <main class="resp-main">
+
+        <h1>Galeria Responsiva</h1>
+
+        <div class="resp-cards">
+            <div class="resp-card"><img src="meu-site/imagens/minha-foto.jpg"><p>Card 1</p></div>
+            <div class="resp-card"><img src="meu-site/imagens/minha-foto.jpg"><p>Card 2</p></div>
+            <div class="resp-card"><img src="meu-site/imagens/minha-foto.jpg"><p>Card 3</p></div>
+            <div class="resp-card"><img src="meu-site/imagens/minha-foto.jpg"><p>Card 4</p></div>
+            <div class="resp-card"><img src="meu-site/imagens/minha-foto.jpg"><p>Card 5</p></div>
+        </div>
+
+    </main>
+
+    <footer class="resp-footer">
+        <p>FATEC 2026</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
