@@ -1,7 +1,21 @@
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding-top: 80px; /* espaço para o header fixo */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: lightgray;
+    padding: 15px;
 }
 
 h1, h2 {
@@ -17,9 +31,21 @@ a:hover {
     color: red;
 }
 
-header, main, footer {
-    padding: 10px;
-    margin-bottom: 20px;
+/* CONTAINER CENTRALIZADO */
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* CARDS */
+.card {
+    display: inline-block;
+    width: 30%;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    vertical-align: top;
 }
 
 table {
@@ -33,7 +59,6 @@ table, th, td {
 
 th, td {
     padding: 8px;
-    text-align: left;
 }
 
 tr:nth-child(even) {
