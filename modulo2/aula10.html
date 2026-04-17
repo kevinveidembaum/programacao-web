@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações</title>
+</head>
+<style>
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.anim-page {
+    animation: fade-in 1s ease;
+}
+
+a, button {
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: red;
+}
+
+.anim-cards {
+    display: flex;
+    gap: 10px;
+}
+
+.anim-card {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.anim-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+button {
+    padding: 10px 20px;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+    }
+}
+</style>
+<body>
+
+<div class="anim-page">
+
+    <header class="anim-header">
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+    </header>
+
+    <main>
+
+        <h1>Cards Animados</h1>
+
+        <div class="anim-cards">
+            <div class="anim-card">Card 1</div>
+            <div class="anim-card">Card 2</div>
+            <div class="anim-card">Card 3</div>
+        </div>
+
+        <h2>Formulário</h2>
+
+        <form>
+            <input type="text" placeholder="Nome"><br><br>
+            <button type="submit">Enviar</button>
+        </form>
+
+    </main>
+
+</div>
+
+</body>
+</html>
