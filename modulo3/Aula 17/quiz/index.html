@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interativo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="tela-inicial">
+            <h1>Bem-vindo ao Quiz!</h1>
+            <p>Teste seus conhecimentos acumulados ao longo deste módulo de JavaScript.</p>
+            <button id="btn-iniciar">Iniciar Quiz</button>
+        </div>
+
+        <div id="tela-questionario" class="escondido">
+            <div class="progresso">
+                Pergunta <span id="num-atual">1</span> de <span id="num-total">5</span>
+            </div>
+            <h2 id="pergunta-texto"></h2>
+            <div id="container-alternativas" class="alternativas-grid"></div>
+        </div>
+
+        <div id="tela-resultado" class="escondido">
+            <h1>Resultado Final</h1>
+            <p class="pontuacao-texto">Você acertou <span id="acertos">0</span> de <span id="total-final">5</span> perguntas!</p>
+            <p id="feedback-mensagem"></p>
+            <button id="btn-reiniciar">Tentar Novamente</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+h1 {
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.progresso {
+    font-size: 13px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.alternativas-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.btn-opcao {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 2px solid #e9ecef;
+    padding: 14px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+.btn-opcao:hover {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+button#btn-iniciar, button#btn-reiniciar {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button#btn-iniciar:hover, button#btn-reiniciar:hover {
+    background-color: #357abd;
+}
+
+.pontuacao-texto {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.pontuacao-texto span {
+    color: #4a90e2;
+}
+
+.escondido {
+    display: none;
+}
