@@ -1,0 +1,6 @@
+{
+  "status": "sucesso",
+  "modulo": "Introdução ao Node.js",
+  "aula": 26,
+  "tecnologias": ["JavaScript", "Node.js", "V8", "npm", "Nodemon"]
+}
