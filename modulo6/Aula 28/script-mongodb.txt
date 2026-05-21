@@ -1,0 +1,64 @@
+Select:
+use escola
+
+Create:
+db.alunos.insertMany([
+    {
+        nome: "Lucas Silva",
+        email: "lucas@email.com",
+        idade: 19,
+        curso: "Análise de Sistemas",
+        notas: [8.5, 7.0, 9.0],
+        ativo: true
+    },
+    {
+        nome: "Beatriz Souza",
+        email: "beatriz@email.com",
+        idade: 22,
+        curso: "Programação Web",
+        notas: [9.5, 10.0],
+        ativo: true
+    },
+    {
+        nome: "Gabriel Costa",
+        email: "gabriel@email.com",
+        idade: 21,
+        curso: "Banco de Dados",
+        notas: [6.0, 7.5],
+        ativo: false
+    },
+    {
+        nome: "Larissa Dias",
+        email: "larissa@email.com",
+        idade: 18,
+        curso: "Programação Web",
+        notas: [8.0, 8.5, 9.0],
+        ativo: true
+    },
+    {
+        nome: "Pedro Rocha",
+        email: "pedro@email.com",
+        idade: 25,
+        curso: "Análise de Sistemas",
+        notas: [5.5, 6.0],
+        ativo: true
+    }
+])
+
+Read:
+db.alunos.find({ nome: "Beatriz Souza" })
+db.alunos.find({ idade: { $gt: 20 } })
+db.alunos.find().sort({ notas: -1 })
+
+Update
+db.alunos.updateOne(
+    { email: "lucas@email.com" },
+    { $set: { idade: 20 } }
+)
+db.alunos.updateOne(
+    { email: "lucas@email.com" },
+    { $push: { notas: 9.5 } }
+)
+
+Delete
+db.alunos.deleteOne({ email: "pedro@email.com" })
